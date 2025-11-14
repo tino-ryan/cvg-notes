@@ -24,12 +24,12 @@ export default function Home() {
 
   // Example links to your notes
 const notes = [
-  { title: 'Basics', path: '/docs/basics' },
-  { title: 'Hierarchical Modelling', path: '/docs/hierarchical-modelling' },
-  { title: 'Lighting', path: '/docs/lighting' },
-  { title: 'OpenGL Basics', path: '/docs/opengl-basics' },
-  { title: 'Programmable Pipeline', path: '/docs/programmable-pipeline' },
-  { title: 'Textures', path: '/docs/textures' },
+  { title: 'Basics', path: '/docs/Basics' },
+  { title: 'Hierarchical Modelling', path: '/docs/Hierarchical_Modelling' },
+  { title: 'Lighting', path: '/docs/Lighting' },
+  { title: 'OpenGL Basics', path: '/docs/OpenGL_Basics' },
+  { title: 'Programmable Pipeline', path: '/docs/Programmable_Pipeline' },
+  { title: 'Textures', path: '/docs/Textures' },
 ];
 
 

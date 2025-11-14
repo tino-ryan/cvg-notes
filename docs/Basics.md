@@ -227,6 +227,57 @@ Math.sqrt(x)
 ```
 
 ---
+## Bezier Curves Quick Reference
+
+### What They Are
+Bezier curves create smooth curves using control points that "pull" the curve toward them.
+
+### Types
+
+#### Quadratic (1 control point)
+```javascript
+graphics.beginPath();
+graphics.moveTo(50, 200);
+graphics.quadraticCurveTo(150, 50, 250, 200);  // cpx, cpy, endx, endy
+graphics.stroke();
+```
+
+#### Cubic (2 control points) - More common
+```javascript
+graphics.beginPath();
+graphics.moveTo(50, 200);
+graphics.bezierCurveTo(
+    100, 50,    // First control point (cp1x, cp1y)
+    200, 50,    // Second control point (cp2x, cp2y)
+    250, 200    // End point (x, y)
+);
+graphics.stroke();
+```
+
+### Common Shapes
+
+#### Heart
+```javascript
+graphics.beginPath();
+graphics.moveTo(cx, cy);
+graphics.bezierCurveTo(cx+50, cy-30, cx+50, cy+50, cx, cy+80);      // Right
+graphics.bezierCurveTo(cx-50, cy+50, cx-50, cy-30, cx, cy);         // Left
+graphics.fill();
+```
+
+#### S-Curve
+```javascript
+graphics.beginPath();
+graphics.moveTo(50, 200);
+graphics.bezierCurveTo(50, 50, 250, 350, 250, 200);
+graphics.stroke();
+```
+
+### Tips
+- **Control points** don't lie on the curve, they pull it toward them
+- Experiment in a drawing tool first to find good control point positions
+- First control point affects the start, second affects the end
+- Use `closePath()` for closed shapes before filling
 
 ## Exam Checklist
 

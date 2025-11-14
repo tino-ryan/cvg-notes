@@ -7,15 +7,16 @@ const config = {
   tagline: 'Coding exam revision for Computer Graphics and Visualization',
   favicon: 'img/favicon.ico',
 
-  // GitHub Pages deployment config
-  url: 'https://tino-ryan.github.io', // your GitHub Pages root
-  baseUrl: '/cvg-notes/',             // repository name
+  // GitHub Pages config
+  url: 'https://tino-ryan.github.io',
+  baseUrl: '/cvg-notes/',
+  trailingSlash: false, // avoids extra slashes
 
-  organizationName: 'tino-ryan',     // GitHub username
-  projectName: 'cvg-notes',          // Repository name
+  organizationName: 'tino-ryan',
+  projectName: 'cvg-notes',
   deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'throw', // keeps build strict for safety
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -30,7 +31,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/tino-ryan/cvg-notes/tree/main/',
         },
-        blog: false, // disable blog completely
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -71,10 +72,12 @@ const config = {
           {
             title: 'Notes',
             items: [
-              {
-                label: 'All Topics',
-                to: '/docs/01-introduction',
-              },
+                { label: 'Basics', to: '/docs/Basics' },
+                { label: 'Hierarchical Modelling', to: '/docs/Hierarchical_Modelling' },
+                { label: 'Lighting', to: '/docs/Lighting' },
+                { label: 'OpenGL Basics', to: '/docs/OpenGL_Basics' },
+                { label: 'Programmable Pipeline', to: '/docs/Programmable_Pipeline' },
+                { label: 'Textures', to: '/docs/Textures' },  // Changed from lowercase
             ],
           },
           {
